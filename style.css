@@ -1,15 +1,40 @@
 :root {
-    --color-principal: #5bb3ad;
-    --color-fondo: #329c9c;
+    --color-principal: #347773;
+    --color-fondo: #438a8a;
     --color-texto: #333;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--color-fondo);
     margin: 0;
     padding: 0;
     color: var(--color-texto);
+
+    background: linear-gradient(
+        -45deg,
+        #329c9c,
+        #5bb3ad,
+        #2f8a8a,
+        #7cc7c2
+    );
+    background-size: 400% 400%;
+    animation: fondoAnimado 12s ease infinite;
+}
+
+@keyframes fondoAnimado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Animación de aparición al cargar */
+body {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 header {
@@ -49,35 +74,73 @@ button {
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 button:hover {
     background-color: #0b4744;
+    transform: scale(1.05);
 }
+
+/* =========================
+   TARJETAS DE HABILIDADES
+   ========================= */
+
 .contenedor-habilidades {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .card {
+    position: relative;
     background-color: rgb(44, 121, 117);
     border: 2px solid var(--color-principal);
     border-radius: 10px;
     padding: 15px;
     width: 200px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* brillo animado */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+}
+
+.card:hover::before {
+    left: 100%;
+    transition: 0.6s;
 }
 
 .card h4 {
     margin-top: 0;
-    color: var(--color-principal);
+    color: white;
 }
 
+/* elevación + glow */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
+
+/* =========================
+   FOTO DE PERFIL
+   ========================= */
+
 .foto-perfil {
     width: 150px;
     height: 150px;
@@ -85,7 +148,17 @@ button:hover {
     object-fit: cover;
     border: 4px solid white;
     margin-bottom: 10px;
+    transition: transform 0.3s;
 }
+
+.foto-perfil:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
 @media (max-width: 600px) {
 
     header {
