@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Smythe';
+    src: url('fonts/Smythe-Regular.ttf') format('truetype');
+}
+
 :root {
     --color-principal: #347773;
     --color-fondo: #438a8a;
@@ -191,7 +196,7 @@ button:hover {
         right: 10px;
         padding: 10px 14px;
     }
-    
+
     header {
         flex-direction: column;
         text-align: center;
