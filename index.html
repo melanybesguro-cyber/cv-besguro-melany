@@ -5,93 +5,111 @@
     <title>CV - Melany Besguro</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Vinculo al CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <img src="foto.jpg" alt="Foto de Melany" class="foto-perfil">
+    <img src="foto.jpg"
+         alt="Foto de perfil de Melany Besguro"
+         class="foto-perfil"
+         loading="lazy">
 
     <h1>Melany Besguro</h1>
     <h2>Estudiante de Programación</h2>
 </header>
 
-<section>
-    <h3>Sobre mí</h3>
+<main>
+
+<section id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+    <h3 id="titulo-sobre-mi">Sobre mí</h3>
     <p>
         Estudiante de la Tecnicatura Universitaria en Programación en la UTN – FRLP,
-actualmente cursando el último año de la carrera. Cuento con conocimientos en
-desarrollo de aplicaciones utilizando Python y Django, bases de datos MySQL y
-tecnologías web básicas como HTML y CSS. Me caracterizo por ser proactiva, con
-buena capacidad de resolución de problemas y facilidad para el trabajo en
-equipo. Busco continuar desarrollando mis conocimientos técnicos en un entorno profesional.
-
+        actualmente cursando el último año de la carrera...
     </p>
 </section>
 
-<section>
-    <h3>Experiencia</h3>
+<section id="experiencia" aria-labelledby="titulo-experiencia">
+    <h3 id="titulo-experiencia">Experiencia</h3>
+
     <p>
         Desarrolladora web (proyecto academico) en
-        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Empresa de Desarrollo Web</a>
+        <a href="https://www.google.com"
+           target="_blank"
+           rel="noopener noreferrer">
+           Empresa de Desarrollo Web
+        </a>
     </p>
 
     <p>
         Email:
-        <a href="mailto:MelanyBesguro@gmail.com" >MelanyBesguro@gmail.com</a>
+        <a href="mailto:MelanyBesguro@gmail.com">
+            MelanyBesguro@gmail.com
+        </a>
     </p>
-    
 </section>
-<section>
-    <h3>Proyectos</h3>
+
+<section id="proyectos" aria-labelledby="titulo-proyectos">
+    <h3 id="titulo-proyectos">Proyectos</h3>
+
     <ul>
         <li>
-            <a href="https://github.com/melanybesguro-cyber" target="_blank" rel="noopener noreferrer">Ver mis proyectos en GitHub</a>
+            <a href="https://github.com/melanybesguro-cyber"
+               target="_blank"
+               rel="noopener noreferrer">
+               Ver mis proyectos en GitHub
+            </a>
         </li>
     </ul>
 </section>
 
-<section>
-    <h3>Habilidades</h3>
+<section id="habilidades" aria-labelledby="titulo-habilidades">
+    <h3 id="titulo-habilidades">Habilidades</h3>
 
     <div class="contenedor-habilidades">
 
-        <div class="card">
+        <article class="card">
             <h4>Python & Django</h4>
             <p>Desarrollo de aplicaciones web utilizando el framework Django.</p>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
             <h4>HTML & CSS</h4>
             <p>Creación de interfaces web estructuradas y estilizadas.</p>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
             <h4>MySQL</h4>
             <p>Diseño y consultas de bases de datos relacionales.</p>
-        </div>
+        </article>
 
     </div>
 </section>
 
-<section>
-    <h3>Contacto</h3>
+<section id="contacto" aria-labelledby="titulo-contacto">
+    <h3 id="titulo-contacto">Contacto</h3>
 
     <form>
-        <input type="text" placeholder="Nombre">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Mensaje"></textarea>
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" placeholder="Nombre">
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Email">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" placeholder="Mensaje"></textarea>
+
         <button type="submit">Enviar</button>
     </form>
-
-    
 </section>
 
-<button class="btn-volver" onclick="volverArriba()">↑</button>
-<!-- Vinculo al JS -->
-<script src="script.js"></script>
+</main>
 
+<button class="btn-volver" onclick="volverArriba()" aria-label="Volver al inicio de la página">
+    ↑
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>
