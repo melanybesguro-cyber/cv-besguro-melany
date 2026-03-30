@@ -158,15 +158,17 @@ button:hover {
    FOTO DE PERFIL
    ========================= */
 
-.photo-perfil {
-    width: 9.375rem;
-    height: 9.375rem;
+..photo-perfil {
+    width: 7rem;
+    height: 7rem;
+    max-width: 25vw;
     border-radius: 50%;
     object-fit: cover;
     border: 0.25rem solid white;
     margin-bottom: 0.625rem;
     transition: transform 0.3s;
 }
+
 
 .photo-perfil:hover {
     transform: scale(1.05);
