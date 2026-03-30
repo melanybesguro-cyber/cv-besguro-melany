@@ -3,11 +3,19 @@
     src: url('fonts/Smythe-Regular.ttf') format('truetype');
 }
 
+/* =========================
+   VARIABLES
+   ========================= */
+
 :root {
     --color-principal: #347773;
     --color-fondo: #438a8a;
     --color-texto: #333;
 }
+
+/* =========================
+   BODY Y FONDO
+   ========================= */
 
 body {
     font-family: Arial, sans-serif;
@@ -23,7 +31,7 @@ body {
         #7cc7c2
     );
     background-size: 400% 400%;
-    animation: fondoAnimado 12s ease infinite;
+    animation: fondoAnimado 12s ease infinite, fadeIn 0.8s ease-in;
 }
 
 @keyframes fondoAnimado {
@@ -32,14 +40,14 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-body {
-    animation: fadeIn 0.8s ease-in;
-}
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* =========================
+   HEADER
+   ========================= */
 
 header {
     background-color: var(--color-principal);
@@ -47,6 +55,10 @@ header {
     padding: 1.25rem;
     text-align: center;
 }
+
+/* =========================
+   SECCIONES
+   ========================= */
 
 section {
     padding: 1.25rem;
@@ -62,6 +74,10 @@ h1, h2, h3 {
 ul {
     padding-left: 1.25rem;
 }
+
+/* =========================
+   FORMULARIO
+   ========================= */
 
 form input,
 form textarea {
@@ -186,15 +202,11 @@ button:hover {
    ========================= */
 
 @media (max-width: 37.5rem) {
+
     .btn-back {
         bottom: 0.625rem;
         right: 0.625rem;
         padding: 0.625rem 0.875rem;
-    }
-
-    header {
-        flex-direction: column;
-        text-align: center;
     }
 
     .skills-container {
