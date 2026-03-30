@@ -158,7 +158,7 @@ button:hover {
    FOTO DE PERFIL
    ========================= */
 
-..photo-perfil {
+.photo-perfil {
     width: 7rem;
     height: 7rem;
     max-width: 25vw;
