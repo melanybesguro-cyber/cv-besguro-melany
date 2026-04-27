@@ -8,9 +8,9 @@
    ========================= */
 
 :root {
-    --color-principal: #347773;
-    --color-fondo: #438a8a;
-    --color-texto: #333;
+    --primary-color: #347773;
+    --background-color: #438a8a;
+    --text-color: #333;
 }
 
 /* =========================
@@ -21,7 +21,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: var(--color-texto);
+    color: var(--text-color);
 
     background: linear-gradient(
         -45deg,
@@ -31,10 +31,10 @@ body {
         #7cc7c2
     );
     background-size: 400% 400%;
-    animation: fondoAnimado 12s ease infinite, fadeIn 0.8s ease-in;
+    animation: backgroundAnimation 12s ease infinite, fadeIn 0.8s ease-in;
 }
 
-@keyframes fondoAnimado {
+@keyframes backgroundAnimation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
@@ -49,8 +49,8 @@ body {
    HEADER
    ========================= */
 
-header {
-    background-color: var(--color-principal);
+.header {
+    background-color: var(--primary-color);
     color: #fff;
     padding: 1.25rem;
     text-align: center;
@@ -87,8 +87,8 @@ form textarea {
     width: 15.625rem;
 }
 
-button {
-    background-color: var(--color-principal);
+.btn {
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 0.625rem;
@@ -116,7 +116,7 @@ button:hover {
 .card {
     position: relative;
     background-color: rgb(44, 121, 117);
-    border: 0.125rem solid var(--color-principal);
+    border: 0.125rem solid var(--primary-color);
     border-radius: 0.625rem;
     padding: 0.9375rem;
     width: 12.5rem;
@@ -158,7 +158,7 @@ button:hover {
    FOTO DE PERFIL
    ========================= */
 
-.photo-perfil {
+.profile-photo {
     width: clamp(4rem, 20vw, 7rem);
     height: clamp(4rem, 20vw, 7rem);
     border-radius: 50%;
@@ -169,7 +169,7 @@ button:hover {
 }
 
 
-.photo-perfil:hover {
+.profile-photo:hover {
     transform: scale(1.05);
 }
 
@@ -177,11 +177,11 @@ button:hover {
    BOTÓN VOLVER ARRIBA
    ========================= */
 
-.btn-back {
+.back-button {
     position: fixed;
     bottom: 1.25rem;
     right: 1.25rem;
-    background-color: var(--color-principal);
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 0.75rem 1rem;
@@ -193,7 +193,7 @@ button:hover {
     transition: transform 0.2s, background-color 0.2s;
 }
 
-.btn-back:hover {
+.back-button:hover {
     background-color: #0b4744;
     transform: scale(1.1);
 }
@@ -204,7 +204,7 @@ button:hover {
 
 @media (max-width: 37.5rem) {
 
-    .btn-back {
+    .back-button {
         bottom: 0.625rem;
         right: 0.625rem;
         padding: 0.625rem 0.875rem;

@@ -13,7 +13,7 @@
 <header class="header">
     <img src="foto.jpg"
          alt="Foto de perfil de Melany Besguro"
-         class="photo-perfil"
+         class="profile-photo"
          loading="lazy">
 
     <h1 class="main-title">Melany Besguro</h1>
@@ -22,8 +22,13 @@
 
 <main>
 
+<<<<<<< HEAD
 <section id="sobre-mi" aria-labelledby="titulo-sobre-mi">
     <h3 id="titulo-sobre-mi">Sobre mí</h3>
+=======
+<section class="section-card" id="about-me" aria-labelledby="about-title">
+    <h3 class="section-title" id="about-title">Sobre mí</h3>
+>>>>>>> d119357 (Traduzco el codigo de español a ingles)
     <p>
        Estudiante de la Tecnicatura Universitaria en Programación en la UTN – FRLP,
 actualmente cursando el último año de la carrera. Cuento con conocimientos en
@@ -35,8 +40,13 @@ y continuar desarrollando mis conocimientos técnicos en un entorno profesional.
     </p>
 </section>
 
+<<<<<<< HEAD
 <section id="experiencia" aria-labelledby="titulo-experiencia">
     <h3 id="titulo-experiencia">Experiencia</h3>
+=======
+<section class="section-card" id="experience" aria-labelledby="experience-title">
+    <h3 class="section-title" id="experience-title">Experiencia</h3>
+>>>>>>> d119357 (Traduzco el codigo de español a ingles)
 
     <p>
         Desarrolladora web (proyecto académico) en
@@ -55,8 +65,8 @@ y continuar desarrollando mis conocimientos técnicos en un entorno profesional.
     </p>
 </section>
 
-<section id="proyectos" aria-labelledby="titulo-proyectos">
-    <h3 id="titulo-proyectos">Proyectos</h3>
+<section class="section-card" id="projects" aria-labelledby="projects-title">
+    <h3 class="section-title" id="projects-title">Proyectos</h3>
 
     <ul>
         <li>
@@ -69,8 +79,8 @@ y continuar desarrollando mis conocimientos técnicos en un entorno profesional.
     </ul>
 </section>
 
-<section id="habilidades" aria-labelledby="titulo-habilidades">
-    <h3 id="titulo-habilidades">Habilidades</h3>
+<section class="section-card" id="skills" aria-labelledby="skills-title">
+    <h3 class="section-title" id="skills-title">Habilidades</h3>
 
     <div class="skills-container">
 
@@ -92,18 +102,18 @@ y continuar desarrollando mis conocimientos técnicos en un entorno profesional.
     </div>
 </section>
 
-<section id="contacto" aria-labelledby="titulo-contacto">
-    <h3 id="titulo-contacto">Contacto</h3>
+<section class="section-card" id="contact" aria-labelledby="contact-title">
+    <h3 class="section-title" id="contact-title">Contacto</h3>
 
     <form>
-        <label for="nombre">Nombre</label>
-        <input id="nombre" type="text" placeholder="Nombre">
+        <label for="name">Nombre</label>
+        <input id="name" class="form-control" type="text" placeholder="Nombre">
 
         <label for="email">Email</label>
         <input id="email" type="email" placeholder="Email">
 
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" placeholder="Mensaje"></textarea>
+        <label for="message">Mensaje</label>
+        <textarea id="message" class="form-control" placeholder="Mensaje"></textarea>
 
         <button type="submit">Enviar</button>
     </form>
@@ -111,8 +121,8 @@ y continuar desarrollando mis conocimientos técnicos en un entorno profesional.
 
 </main>
 
-<button class="btn-back"
-        onclick="volverArriba()"
+<button class="back-button"
+        onclick="backToTop()"
         aria-label="Volver al inicio de la página">
     ↑
 </button>
