@@ -8,15 +8,9 @@
    ========================= */
 
 :root {
-<<<<<<< HEAD
-    --color-principal: #347773;
-    --color-fondo: #438a8a;
-    --color-texto: #333;
-=======
     --primary-color: #347773;
     --background-color: #438a8a;
     --text-color: #111;
->>>>>>> 5cc1d9f (Mejoro el contrast ratio)
 }
 
 /* =========================
@@ -40,9 +34,6 @@ body {
     animation: fondoAnimado 12s ease infinite, fadeIn 0.8s ease-in;
 }
 
-<<<<<<< HEAD
-@keyframes fondoAnimado {
-=======
 .section-card {
     padding: 1.25rem;
     margin: 0.625rem;
@@ -52,7 +43,6 @@ body {
 }
 
 @keyframes backgroundAnimation {
->>>>>>> 5cc1d9f (Mejoro el contrast ratio)
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
