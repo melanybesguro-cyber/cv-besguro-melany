@@ -1,8 +1,8 @@
 // Botón volver arriba
-const btnBack = document.querySelector(".btn-back");
+const backButton = document.querySelector(".back-button");
 
 // oculto al cargar
-btnBack.style.display = "none";
+backButton.style.display = "none";
 
 window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
@@ -11,14 +11,14 @@ window.addEventListener("scroll", () => {
 
     // si está cerca del final (último 15% de la página)
     if (scrollTop + windowHeight >= docHeight * 0.85) {
-        btnBack.style.display = "block";
+        backButton.style.display = "block";
     } else {
-        btnBack.style.display = "none";
+        backButton.style.display = "none";
     }
 });
 
 // función para volver arriba
-function volverArriba() {
+function backToTop() {
     window.scrollTo({
         top: 0,
         behavior: "smooth"
