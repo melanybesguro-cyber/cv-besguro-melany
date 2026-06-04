@@ -22,7 +22,7 @@
    ========================= */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Smythe",Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: var(--text-color);
@@ -64,18 +64,20 @@ body {
    SECCIONES
    ========================= */
 
-section {
+.section-card {
     padding: 1.25rem;
     margin: 0.625rem;
     background: var(--section-background);
     border-radius: 0.5rem;
 }
 
-h1, h2, h3 {
+.main-title,
+.subtitle,
+.section-title {
     margin: 0 0 0.625rem 0;
 }
 
-ul {
+.list {
     padding-left: 1.25rem;
 }
 
@@ -83,8 +85,7 @@ ul {
    FORMULARIO
    ========================= */
 
-form input,
-form textarea {
+.form-control {
     display: block;
     margin-bottom: 0.625rem;
     padding: 0.5rem;
@@ -222,8 +223,7 @@ button:hover {
         width: 90%;
     }
 
-    form input,
-    form textarea {
+    .form-control {
         width: 100%;
     }
 }
