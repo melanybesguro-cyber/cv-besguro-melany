@@ -9,8 +9,12 @@
 
 :root {
     --primary-color: #347773;
+    --primary-hover: #0b4744;
     --background-color: #438a8a;
-    --text-color: #111;
+    --text-color: #333;
+    --section-background: rgb(190, 195, 196);
+    --card-background: rgb(44, 121, 117);
+    --white: #ffffff;
 }
 
 /* =========================
@@ -21,25 +25,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: var(--color-texto);
+    color: var(--text-color);
 
-    background: linear-gradient(
-        -45deg,
-        #329c9c,
-        #5bb3ad,
-        #2f8a8a,
-        #7cc7c2
+   background: linear-gradient(
+    -45deg,
+    var(--background-color),
+    #5bb3ad,
+    #2f8a8a,
+    #7cc7c2
     );
     background-size: 400% 400%;
-    animation: fondoAnimado 12s ease infinite, fadeIn 0.8s ease-in;
-}
-
-.section-card {
-    padding: 1.25rem;
-    margin: 0.625rem;
-    background: #f4f4f4;
-    color: #111;
-    border-radius: 0.5rem;
+    animation: backgroundAnimation 12s ease infinite, fadeIn 0.8s ease-in;
 }
 
 @keyframes backgroundAnimation {
@@ -57,9 +53,9 @@ body {
    HEADER
    ========================= */
 
-header {
-    background-color: var(--color-principal);
-    color: #fff;
+.header {
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 1.25rem;
     text-align: center;
 }
@@ -71,7 +67,7 @@ header {
 section {
     padding: 1.25rem;
     margin: 0.625rem;
-    background: rgb(190, 195, 196);
+    background: var(--section-background);
     border-radius: 0.5rem;
 }
 
@@ -95,9 +91,9 @@ form textarea {
     width: 15.625rem;
 }
 
-button {
-    background-color: var(--color-principal);
-    color: white;
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
     border: none;
     padding: 0.625rem;
     cursor: pointer;
@@ -106,7 +102,7 @@ button {
 }
 
 button:hover {
-    background-color: #0b4744;
+    background-color: var(--primary-hover);
     transform: scale(1.05);
 }
 
@@ -123,8 +119,8 @@ button:hover {
 
 .card {
     position: relative;
-    background-color: rgb(44, 121, 117);
-    border: 0.125rem solid var(--color-principal);
+    background-color: var(--card-background);
+    border: 0.125rem solid var(--primary-color);
     border-radius: 0.625rem;
     padding: 0.9375rem;
     width: 12.5rem;
@@ -154,7 +150,7 @@ button:hover {
 
 .card h4 {
     margin-top: 0;
-    color: white;
+    color: var(--white);
 }
 
 .card:hover {
@@ -166,18 +162,17 @@ button:hover {
    FOTO DE PERFIL
    ========================= */
 
-.photo-perfil {
+.profile-photo {
     width: clamp(4rem, 20vw, 7rem);
     height: clamp(4rem, 20vw, 7rem);
     border-radius: 50%;
     object-fit: cover;
-    border: 0.25rem solid white;
+    border: 0.25rem solid var(--white);
     margin-bottom: 0.625rem;
     transition: transform 0.3s;
 }
 
-
-.photo-perfil:hover {
+.profile-photo:hover {
     transform: scale(1.05);
 }
 
@@ -185,12 +180,12 @@ button:hover {
    BOTÓN VOLVER ARRIBA
    ========================= */
 
-.btn-back {
+.back-button {
     position: fixed;
     bottom: 1.25rem;
     right: 1.25rem;
-    background-color: var(--color-principal);
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
     border: none;
     padding: 0.75rem 1rem;
     border-radius: 50%;
@@ -201,8 +196,8 @@ button:hover {
     transition: transform 0.2s, background-color 0.2s;
 }
 
-.btn-back:hover {
-    background-color: #0b4744;
+.back-button:hover {
+    background-color: var(--primary-hover);
     transform: scale(1.1);
 }
 
@@ -212,7 +207,7 @@ button:hover {
 
 @media (max-width: 37.5rem) {
 
-    .btn-back {
+    .back-button {
         bottom: 0.625rem;
         right: 0.625rem;
         padding: 0.625rem 0.875rem;
