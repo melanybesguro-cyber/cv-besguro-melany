@@ -22,11 +22,7 @@
    ========================= */
 
 body {
-<<<<<<< HEAD
     font-family: "Smythe",Arial, sans-serif;
-=======
-    font-family: 'Smythe', Arial, sans-serif;
->>>>>>> 1316403 (Corregir contraste y uso de variables CSS)
     margin: 0;
     padding: 0;
     color: var(--text-color);
